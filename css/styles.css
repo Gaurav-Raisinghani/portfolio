@@ -16,14 +16,17 @@
 }
 
 body.light-mode {
-  --bg-1: #E9F1FF;
-  --bg-2: #FFFFFF;
-  --txt: #001F3F;
-  --accent: #2ECC71;
-  --secondary: #39FF14;
-  --card: rgba(0, 0, 0, 0.1);
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  --surface: rgba(0, 0, 0, 0.05);
+   --bg-1: #001F3F;
+  --bg-2: #0A2540;
+  --txt: #FFFFFF;
+  --accent: #39FF14;
+  --secondary: #2ECC71;
+  --card: rgba(255, 255, 255, 0.1);
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --particle: #39FF14;
+  --particle-light: #70fa00;
+  --particle-count: 40
+  --surface: rgba(255, 255, 255, 0.05);
 }
 
 /* Global */
