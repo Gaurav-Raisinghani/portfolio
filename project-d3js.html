@@ -1,0 +1,167 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,-scale=1.0">
+  <meta name="description" content="Interactive D3.js data-visualization project by Gaurav Raisinghani.">
+  <title>Interactive Data Visualization • Gaurav Raisinghani</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+  nav,
+  .hero-content,
+  .stats-grid,
+  .card,
+  .project-gallery,.hero-.btn,
+  footer ,.stats-grid,.stat-card {
+    opacity: 1 !important;
+  }
+</style>
+</head>
+<body>
+  <div id="particles-js"></div>
+<body class="dark-mode">
+    <div id="particles-js"></div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#overview">Overview</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>  <!-- Or change to "index.html#projects" if preferred -->
+    <a href="index.html#articles">Articles</a>
+    <a href="index.html#contact">Contact</a>
+    <!-- <button id="themeToggle">🌙 Dark Mode</button>  Moved outside <li> for validity; style as needed -->
+</nav>
+    <script>
+  document.querySelectorAll('a[href^="index.html"]').forEach(link => {
+    link.addEventListener('click', () => {
+      sessionStorage.setItem('skipSplash', 'true');
+    });
+  });
+</script>
+
+  <header id="hero" class="hero parallax-layer-1">
+    <div class="hero-content">
+      <h1 class="hero-title gradient-text">Interactive Data Visualization with D3.js</h1>
+      <p class="hero-subtitle">A responsive lollipop-chart dashboard that turns raw data into dynamic stories.</p>
+      <div class="hero-cta">
+        <a href="#project-details" class="btn" style="opacity: 1;"><i class="fas fa-arrow-down" ></i> View Details</a>
+        <a href="https://github.com/Gaurav-Raisinghani" target="_blank" class="btn ghost" style="opacity: 1;"><i class="fab fa-github"></i> Source Code</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="project-details" class="container">
+
+    <!-- Metrics & overview -->
+    <div class="stats-grid">
+      <!-- <div class="stat-card"><span class="stat-number">02 / 2025</span><span class="stat-label">Completion Date</span></div> -->
+      <div class="stat-card"><span class="stat-number">3</span><span class="stat-label">Times Interactive Views</span></div>
+      <div class="stat-card"><span class="stat-number">+40%</span><span class="stat-label">User Engagement</span></div>
+      <div class="stat-card"><span class="stat-number">0.9 s</span><span class="stat-label">Initial Load Time (s)</span></div>
+    </div>
+
+    <!-- Project Summary & Highlights -->
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+      <div class="card">
+        <h3><i class="fas fa-info-circle"></i> Project Summary</h3>
+        <p>This visualization transforms a CSV of economic indicators into an interactive lollipop chart. Users can sort, filter, zoom, and hover for tool-tips, exploring trends without ever reloading the page.</p>
+        <p><strong>Stack :</strong> D3 v7, vanilla JS ES6, SVG, Flexbox.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+        <ul>
+          <li>💡 Custom <code>d3.scaleBand</code> & <code>d3.scaleLinear</code> for adaptive sizing.</li>
+          <li>⚡ Lazy-loaded data & deferred GSAP animations (0.9 s FCP).</li>
+          <li>📱 Responsive SVG viewBox for perfect mobile rendering.</li>
+          <li>🧩 Modular architecture: one self-contained <code>chart.js</code> class reusable across dashboards.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Challenge & Goals -->
+      <h2>🚩 Challenge & Goals</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+        <div class="card">
+          <h3><i class="fas fa-bullseye"></i> Problem Statement</h3>
+          <p>Raw CSV dashboards were static and hard to explore. Users lacked intuitive controls to drill into economic indicator trends in real time.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-flag-checkered"></i> Objectives</h3>
+          <ul>
+            <li>Enable dynamic sorting and filtering without refresh</li>
+            <li>Maintain sub-second load and render times</li>
+            <li>Ensure WCAG AA–compliant color contrast</li>
+          </ul>
+        </div>
+      </div>
+
+
+    <!-- Architecture & Data Flow -->
+ 
+      <h2>🗺️ Architecture & Data Flow</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Data Loader:</strong> Fetches CSV via XHR and parses with <code>d3.csv()</code>.</li>
+          <li><strong>Chart Module:</strong> Encapsulated in <code>chart.js</code>, exposes APIs for sort, filter, and zoom.</li>
+          <li><strong>Animation Layer:</strong> GSAP timelines trigger on data joins, synced with <code>requestAnimationFrame</code>.</li>
+          <li><strong>UI Controls:</strong> Custom dropdowns and sliders bound via event listeners to chart APIs.</li>
+        </ul>
+      </div>
+
+
+    <!-- Performance & Benchmarks -->
+   
+      <h2>⚙️ Performance & Benchmarks</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-number">0.9 s</span><span class="stat-label">First Paint(s)</span></div>
+        <div class="stat-card"><span class="stat-number">60 fps</span><span class="stat-label">Avg. Frame Rate (fps)</span></div>
+        <div class="stat-card"><span class="stat-number">25 ms</span><span class="stat-label">Update Latency (ms)</span></div>
+        <div class="stat-card"><span class="stat-number">15 k</span><span class="stat-label">Data Points (in thousands)</span></div>
+      </div>
+      <p>Benchmarks run on Chrome 115, macOS; memory footprint under 20 MB.</p>
+   
+
+
+    <!-- User Feedback & Testimonials -->
+  
+      <h2>🗣️ User Feedback & Testimonials</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+        <div class="card">
+          <p>“The filtering and sorting controls feel instantaneous. We can now explore trends on the fly without writing code.”</p>
+          <p><strong>– Data Team Lead, FinTech Co.</strong></p>
+        </div>
+        <div class="card">
+          <p>“Beautiful animations that don’t compromise performance. Our stakeholders love the smooth tool-tips.”</p>
+          <p><strong>– UX Designer, Analytics Startup</strong></p>
+        </div>
+      </div>
+  
+    <!-- Future Roadmap -->
+      <h2>🚀 Future Roadmap</h2>
+          <div class="card">
+      <ul>
+        <li>Integrate time-series slider for snapshot comparison</li>
+        <li>Add export to PNG/SVG for reporting use cases</li>
+        <li>Implement real-time data streaming via WebSockets</li>
+        <li>Enhance accessibility with keyboard navigation support</li>
+      </ul>
+    </div>
+    <!-- Back button -->
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="projects.html" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    </div>
+      <footer>
+    <p>&copy; 2025 Gaurav Raisinghani. All rights reserved.</p>
+  </footer>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

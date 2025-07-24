@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Gaurav Raisinghani.">
+    <title>Gaurav Raisinghani - Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div id="particles-js"></div>
+<nav>
+     <a href="index.html">Home</a>
+    <a href="index.html#overview">Overview</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>  <!-- Or change to "index.html#projects" if preferred -->
+    <a href="index.html#articles">Articles</a>
+    <a href="index.html#contact">Contact</a>
+    <!-- <button id="themeToggle">🌙 Dark Mode</button>  Moved outside <li> for validity; style as needed -->
+</nav>
+    <script>
+  document.querySelectorAll('a[href^="index.html"]').forEach(link => {
+    link.addEventListener('click', () => {
+      sessionStorage.setItem('skipSplash', 'true');
+    });
+  });
+</script>
+    <section class="container parallax-layer-2">
+        <h2 class="gradient-text" style="text-align:center;margin-bottom:3rem;">Featured Projects</h2>
+        
+        <!-- Tech Ticker for Visual Interest -->
+        <div class="tech-ticker morph-element">
+            <div class="tech-ticker-track"></div>
+        </div>
+        
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;margin-top:3rem;">
+            <div class="card dynamic-text">
+                <h3><i class="fas fa-chart-bar" style="color:var(--accent);margin-right:0.5rem;"></i>Interactive Data Visualization with D3.js</h3>
+                <p style="margin:1rem 0;opacity:0.9;">Developed an interactive lollipop chart featuring smooth animations, responsive design, and real-time data binding for enhanced user engagement.</p>
+                <div style="margin-top:1.5rem;">
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">D3.js</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">HTML/CSS</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">JavaScript</span>
+                </div>
+                <p style="margin:1rem 0;opacity:0.9;"><strong>Impact:</strong> Improved data interaction for 100+ users in health analytics prototype.</p>
+                <a href="project-d3js.html" class="btn">View Details</a>
+            </div>
+            
+            <div class="card dynamic-text">
+                <h3><i class="fas fa-shield-alt" style="color:var(--accent);margin-right:0.5rem;"></i>Privacy-Preserving Health Insurance Analytics</h3>
+                <p style="margin:1rem 0;opacity:0.9;">Designed a secure system using OAuth 2.0, Kafka for streaming, AES-256 encryption, and homomorphic encryption to enable data analysis without compromising privacy.</p>
+                <div style="margin-top:1.5rem;">
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">OAuth 2.0</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">Kafka</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Encryption</span>
+                </div>
+                <p style="margin:1rem 0;opacity:0.9;"><strong>Impact:</strong> Enabled secure processing of sensitive health data for insurance fraud detection.</p>
+                <a href="privacy.html" class="btn">View Details</a>
+            </div>
+            
+            <div class="card dynamic-text">
+                <h3><i class="fas fa-cloud" style="color:var(--accent);margin-right:0.5rem;"></i>Spring Cloud Gateway Middleware for TMS</h3>
+                <p style="margin:1rem 0;opacity:0.9;">Implemented an API gateway middleware using Spring Cloud to manage traffic and improve backend performance by 25% in a transportation management system.</p>
+                <div style="margin-top:1.5rem;">
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">Spring Cloud</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">Microservices</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Java</span>
+                </div>
+                <p style="margin:1rem 0;opacity:0.9;"><strong>Impact:</strong> Reduced latency and improved scalability for high-traffic TMS applications.</p>
+                <a href="gateway.html" class="btn">View Details</a>
+            </div>
+            
+            <div class="card dynamic-text">
+                <h3><i class="fas fa-search" style="color:var(--accent);margin-right:0.5rem;"></i>Rich Results Implementation</h3>
+                <p style="margin:1rem 0;opacity:0.9;">Applied schema markup to boost click-through rate by 15% and search rankings by 30% for web applications.</p>
+                <div style="margin-top:1.5rem;">
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">Schema Markup</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">SEO</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Google Search</span>
+                </div>
+                <p style="margin:1rem 0;opacity:0.9;"><strong>Impact:</strong> Increased organic traffic and visibility for digital products.</p>
+                <a href="rich.html" class="btn">View Details</a>
+            </div>
+            
+            <div class="card dynamic-text">
+                <h3><i class="fas fa-heartbeat" style="color:var(--accent);margin-right:0.5rem;"></i>Parkinson Patient Device</h3>
+                <p style="margin:1rem 0;opacity:0.9;">Developed a device for monitoring Parkinson's patients, published in Turkish Journal of Physiotherapy and Rehabilitation.</p>
+                <div style="margin-top:1.5rem;">
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">HMI</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">Sensors</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Research</span>
+                </div>
+                <p style="margin:1rem 0;opacity:0.9;"><strong>Impact:</strong> Contributed to medical technology for better patient care.</p>
+                <a href="parkinson.html" class="btn">View Details</a>
+            </div>
+            
+            <div class="card dynamic-text">
+                <h3><i class="fas fa-map-marked-alt" style="color:var(--accent);margin-right:0.5rem;"></i>Architectural Design of GIS and HMI</h3>
+                <p style="margin:1rem 0;opacity:0.9;">Integrated sensors and improved system stability for GIS and HMI architecture.</p>
+                <div style="margin-top:1.5rem;">
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">GIS</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;margin-right:0.5rem;">HMI</span>
+                    <span style="background:var(--surface);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Sensors</span>
+                </div>
+                <p style="margin:1rem 0;opacity:0.9;"><strong>Impact:</strong> Enhanced system reliability for industrial applications.</p>
+                <a href="gis.html" class="btn">View Details</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gaurav Raisinghani. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

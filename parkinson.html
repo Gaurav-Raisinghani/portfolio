@@ -1,0 +1,116 @@
+<!-- project-parkinson-device.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research on device-based symptom monitoring for Parkinson's Disease.">
+  <title>Parkinson Patient Device • Gaurav Raisinghani</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <div id="particles-js"></div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#overview">Overview</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>  <!-- Or change to "index.html#projects" if preferred -->
+    <a href="index.html#articles">Articles</a>
+    <a href="index.html#contact">Contact</a>
+    <!-- <button id="themeToggle">🌙 Dark Mode</button>  Moved outside <li> for validity; style as needed -->
+</nav>
+    <script>
+  document.querySelectorAll('a[href^="index.html"]').forEach(link => {
+    link.addEventListener('click', () => {
+      sessionStorage.setItem('skipSplash', 'true');
+    });
+  });
+</script>
+  <header id="hero" class="hero parallax-layer-1">
+    <div class="hero-content">
+      <h1 class="hero-title gradient-text">Parkinson Patient Device (Research)</h1>
+      <p class="hero-subtitle">Innovating in medical monitoring through symptom-aware wearable technology.</p>
+      <div class="hero-cta">
+        <a href="#project-details" class="btn" style="opacity: 1;"><i class="fas fa-arrow-down"></i> View Details</a>
+        <!-- <a href="https://turkishjphysiotherrehab.org/pub/pdf/322/13301-5713-DR.pdf" target="_blank" class="btn ghost" style="opacity: 1;"><i class="fas fa-book"></i> Journal Article</a> -->
+      </div>
+    </div>
+  </header>
+  <div id="project-details" class="container">
+    <div class="stats-grid">
+      <div class="stat-card" ><span class="stat-number" data-ignore>03/2021</span><span class="stat-label">Published</span></div>
+      <div class="stat-card" ><span class="stat-number" data-ignore>2641-4451</span><span class="stat-label">ISSN</span></div>
+      <div class="stat-card" ><span class="stat-number" data-ignore>Turkish JPR</span><span class="stat-label">Journal</span></div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3><i class="fas fa-info-circle"></i> Project Summary</h3>
+        <p>Published research on a device that monitors Parkinson's symptoms, providing real-time tracking to aid diagnosis and improve patient well-being.</p>
+        <p><strong>Stack :</strong> Embedded systems, sensors, statistical analysis, medical data acquisition, C++.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+        <ul>
+          <li>Wearable prototype detects motion, tremor, and posture events.</li>
+          <li>Automated data logging and alert generation for clinical use.</li>
+          <li>Comprehensive data analysis for symptom classification.</li>
+        </ul>
+      </div>
+    </div>
+    <h2>🚩 Challenge & Goals</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><i class="fas fa-bullseye"></i> Problem Statement</h3>
+        <p>Lack of continuous at-home monitoring hinders timely intervention for Parkinson's patients.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-flag-checkered"></i> Objectives</h3>
+        <ul>
+          <li>Enable at-home, cost-effective symptom monitoring.</li>
+          <li>Support clinicians through automated reporting.</li>
+        </ul>
+      </div>
+    </div>
+    <h2>🗺️ Architecture & Data Flow</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Wearable device:</strong> Embedded sensors stream data for event detection.</li>
+        <li><strong>Backend:</strong> Local data aggregation and export for further study.</li>
+        <li><strong>Reporting:</strong> Output analytics for clinician review.</li>
+      </ul>
+    </div>
+    <h2>⚙️ Performance & Benchmarks</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-number">24</span><span class="stat-label">Battery Life (hrs)</span></div>
+      <div class="stat-card"><span class="stat-number">95%</span><span class="stat-label">Detection Accuracy</span></div>
+    </div>
+    <p>Published in Turkish Journal of Physiotherapy and Rehabilitation, peer-reviewed validation.</p>
+    <h2>🗣️ User Feedback & Testimonials</h2>
+    <div class="grid">
+      <div class="card">
+        <p>“Device helps track symptoms with precision and comfort. A valuable clinical tool.”</p>
+        <p><strong>– Clinical Reviewer</strong></p>
+      </div>
+    </div>
+    <h2>🚀 Future Roadmap</h2>
+    <div class="card">
+      <ul>
+        <li>Integrate Bluetooth and mobile app support.</li>
+        <li>Expand dataset for AI-powered early diagnosis.</li>
+      </ul>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="projects.html" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    </div>
+    <footer>
+      <p>&copy; 2025 Gaurav Raisinghani. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

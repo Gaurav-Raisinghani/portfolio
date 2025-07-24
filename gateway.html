@@ -1,0 +1,127 @@
+<!-- project-spring-gateway.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spring Cloud Gateway middleware for Traffic Management System (TMS).">
+  <title>Spring Cloud Gateway Middleware for TMS • Gaurav Raisinghani</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <div id="particles-js"></div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#overview">Overview</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>  <!-- Or change to "index.html#projects" if preferred -->
+    <a href="index.html#articles">Articles</a>
+    <a href="index.html#contact">Contact</a>
+    <!-- <button id="themeToggle">🌙 Dark Mode</button>  Moved outside <li> for validity; style as needed -->
+</nav>
+    <script>
+  document.querySelectorAll('a[href^="index.html"]').forEach(link => {
+    link.addEventListener('click', () => {
+      sessionStorage.setItem('skipSplash', 'true');
+    });
+  });
+</script>
+  <header id="hero" class="hero parallax-layer-1">
+    <div class="hero-content">
+      <h1 class="hero-title gradient-text">Spring Cloud Gateway Middleware<br> for TMS</h1>
+      <p class="hero-subtitle">Efficiently managing API traffic and security for distributed microservices in real time.</p>
+      <div class="hero-cta">
+        <a href="#project-details" class="btn" style="opacity: 1;"><i class="fas fa-arrow-down" ></i> View Details</a>
+        <!-- Add GitHub link here if source is public -->
+      </div>
+    </div>
+  </header>
+
+  <div id="project-details" class="container">
+
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-number" data-ignore>07/2024</span><span class="stat-label">Completion Date</span></div>
+      <div class="stat-card"><span class="stat-number">+25%</span><span class="stat-label">Performance Improvement</span></div>
+      <div class="stat-card"><span class="stat-number">0</span><span class="stat-label">Major Incidents</span></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3><i class="fas fa-info-circle"></i> Project Summary</h3>
+        <p>
+          Designed and managed the API gateway middleware for TMS using Spring Cloud Gateway. Optimized routing, scaled traffic management, and built secure, observable infrastructure that reduced latency and improved backend performance by 25%.
+        </p>
+        <p><strong>Stack :</strong> Java, Spring Cloud Gateway, Feign, Kafka, SQL, MongoDB, Google Cloud.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+        <ul>
+          <li>Centralized API gateway for secure, efficient microservice calls.</li>
+          <li>Kubernetes/Cloud deployment for scalability.</li>
+          <li>Integrated monitoring (Splunk, Kibana) with custom metrics.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>🚩 Challenge & Goals</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><i class="fas fa-bullseye"></i> Problem Statement</h3>
+        <p>Monolithic API management and scattered security controls led to bottlenecks, downtime, and fragile scaling.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-flag-checkered"></i> Objectives</h3>
+        <ul>
+          <li>Centralize and secure all traffic entry points.</li>
+          <li>Reduce latency and downtime for backend systems.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>🗺️ Architecture & Data Flow</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Gateway:</strong> Handles authentication, rate limiting, intelligent routing.</li>
+        <li><strong>Service Mesh:</strong> Feign/Kafka-based microservices, orchestrated via Gateway for resilience.</li>
+        <li><strong>Observability:</strong> Monitoring via Splunk/Kibana for traffic, error tracking, and traceability.</li>
+      </ul>
+    </div>
+
+    <h2>⚙️ Performance & Benchmarks</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-number">25%</span><span class="stat-label">Reduced Latency</span></div>
+      <div class="stat-card"><span class="stat-number">99.95%</span><span class="stat-label">API Uptime</span></div>
+    </div>
+    <p>Benchmarks on staging replicated typical customer traffic: sub-300ms response times under load.</p>
+
+    <h2>🗣️ User Feedback & Testimonials</h2>
+    <div class="grid">
+      <div class="card">
+        <p>“Our backend incident rate dropped to zero after introducing the new API Gateway stack.”</p>
+        <p><strong>– Product Owner, TMS</strong></p>
+      </div>
+    </div>
+
+    <h2>🚀 Future Roadmap</h2>
+    <div class="card">
+      <ul>
+        <li>Add zero-downtime rolling updates.</li>
+        <li>Auto-scale gateway based on real-time load metrics.</li>
+      </ul>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="projects.html" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    </div>
+    <footer>
+      <p>&copy; 2025 Gaurav Raisinghani. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

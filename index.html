@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Raisinghani</title>
+    <meta name="description" content="Gaurav Raisinghani - Software Engineer specializing in Java, Spring, microservices, and data visualization. MS Computer Science from Arizona State University.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css">
+</head>
+<body>
+    <!-- Splash Transition Page -->
+<div id="splash" class="splash-page">
+  <div class="splash-content">
+    <blockquote id="quote-text" class="splash-quote">"Code is like humor. When you have to explain it, it's bad."</blockquote>
+    <cite id="quote-author" class="splash-cite">— Cory House</cite>
+    <!-- <p class="splash-loading">Loading Portfolio...</p> -->
+  </div>
+</div>
+
+<script>
+  // Array of quotes (you can expand this list)
+  const quotes = [
+    { text: "Code is like humor. When you have to explain it, it's bad.", author: "Cory House" },
+    { text: "Programs must be written for people to read, and only incidentally for machines to execute.", author: "Harold Abelson" },
+    { text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", author: "Martin Fowler" },
+    { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+    { text: "The best way to predict the future is to implement it.", author: "David Heinemeier Hansson" },
+    { text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" },
+    { text: "Talk is cheap. Show me the code.", author: "Linus Torvalds" },
+    { text: "It's not a bug – it's an undocumented feature.", author: "Anonymous" },
+    { text: "The function of good software is to make the complex appear to be simple.", author: "Grady Booch" }
+  ];
+
+  // Function to pick and display a random quote
+  function displayRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length); // Pick a random index
+    const randomQuote = quotes[randomIndex];
+
+    
+    const splashScreen = document.getElementById('splash');
+    const mainContent = document.querySelector('.content');
+    const skipSplash = sessionStorage.getItem('skipSplash');
+
+    if (skipSplash === 'true') {
+      sessionStorage.removeItem('skipSplash');
+      if (splashScreen) splashScreen.style.display = 'none';
+      if (mainContent) mainContent.style.display = 'block';
+    } else {
+      if (splashScreen) {
+        setTimeout(() => splashScreen.classList.add("display-none"), 2000);
+      }
+      if (mainContent) {
+        setTimeout(() => mainContent.style.display = 'block', 2500);
+      }
+    }
+    
+    // Update the HTML elements
+    document.getElementById('quote-text').textContent = `"${randomQuote.text}"`;
+    document.getElementById('quote-author').textContent = `— ${randomQuote.author}`;
+  }
+
+  // Run the function when the page loads
+  window.addEventListener('load', displayRandomQuote);
+  // Remove any scroll-locking classes on load
+document.body.classList.remove('no-scroll');
+document.documentElement.style.overflow = 'auto';  // just in case
+
+// Also check if any inline styles disabling scroll
+document.body.style.overflow = 'auto';
+   
+</script>
+
+    <div id="particles-js"></div>
+    <!-- <button id="themeToggle">🌙 Dark Mode</button> -->
+
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+        <a href="Gaurav_s_Resume.pdf" download class="btn"><i class="fas fa-download"></i> Download Resume</a>
+    </nav>
+
+    <section id="hero" class="hero parallax-layer-1">
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">Gaurav Raisinghani</h1>
+            
+            <!-- Updated Tagline with Full Visibility -->
+            <p class="hero-tagline">
+                <span class="tagline-item">Backend Developer</span>
+                <span class="tagline-item">Microservices Expert</span>
+                <span class="tagline-item">D3.js Data Artist</span>
+                <span class="tagline-item">API Performance Guru</span>
+            </p>
+            
+            <!-- Social Icons Row -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/gaurav-raisinghani/" target="_blank" aria-label="LinkedIn", style="opacity: 1;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Gaurav-Raisinghani" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://medium.com/@gauravraisinghani1998" target="_blank" aria-label="Medium">
+                    <i class="fab fa-medium"></i>
+                </a>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="btn" style="opacity: 1;"><i class="fas fa-rocket"></i> Explore Projects</a>
+                <a href="#contact" class="btn ghost" style="opacity: 1;"><i class="fas fa-envelope"></i> Hire Me</a>
+            </div>
+        </div>
+    </section>
+    <!-- OVERVIEW DASHBOARD -->
+    <section id="overview" class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;" class="dynamic-text">Professional Overview</h2>
+        
+        <!-- Quick Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">3.89</span>
+                <span class="stat-label">MS CGPA/4.0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">30%</span>
+                <span class="stat-label">Performance Boost</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">6000+</span>
+                <span class="stat-label">Article Readers</span>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 4rem;">
+            <!-- Education & Background -->
+            <div class="card">
+                <h3><i class="fas fa-graduation-cap" style="color: var(--accent); margin-right: 0.5rem;"></i>Education</h3>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Arizona State University</h4>
+                    <p>Master of Science - Computer Science<br>
+                    <strong>CGPA: 3.89/4.0</strong> • Aug 2024 - Dec 2025</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">SRM Institute of Science and Technology</h4>
+                    <p>Bachelor of Technology - Computer Science<br>
+                    <strong>CGPA: 9.23/10</strong> • Jun 2017 - May 2021</p>
+                </div>
+            </div>
+
+            <!-- Current Focus -->
+            <div class="card">
+                <h3><i class="fas fa-target" style="color: var(--accent); margin-right: 0.5rem;"></i>Current Focus</h3>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Specializations</h4>
+                    <p>Backend Development • Microservices Architecture • Data Visualization • Spring Cloud Gateway</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Research Interests</h4>
+                    <p>Solving complex problems like P=NP • Interactive data narratives with D3.js • Privacy-preserving analytics</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Achievements -->
+        <div class="card morph-element" style="margin-top: 2rem;">
+            <h3><i class="fas fa-trophy" style="color: var(--accent); margin-right: 0.5rem;"></i>Key Achievements</h3>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                <div style="padding: 1rem; background: var(--surface); border-radius: 8px; border-left: 4px solid var(--accent);">
+                    <strong>Performance Optimization</strong>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Led backend services at Quinbay improving performance by 30% and minimizing downtime by 25%</p>
+                </div>
+                <div style="padding: 1rem; background: var(--surface); border-radius: 8px; border-left: 4px solid var(--accent);">
+                    <strong>SEO Innovation</strong>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Implemented schema markup boosting CTR by 15% and search rankings by 30%</p>
+                </div>
+                <div style="padding: 1rem; background: var(--surface); border-radius: 8px; border-left: 4px solid var(--accent);">
+                    <strong>Research Publication</strong>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Published research on Parkinson Patient Device in Turkish Journal of Physiotherapy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION WITH TECH TICKER -->
+  <section id="skills" class="container">
+  <h2 class="gradient-text" style="text-align:center;margin-bottom:2rem;">Technical Expertise</h2>
+  <div class="tech-ticker">
+    <div class="tech-ticker-track">
+      <!-- Duplicated for infinite scroll -->
+      <div class="tech-logo" title="Python"><img src="logos/python.svg" alt="Python"></div>
+      <div class="tech-logo" title="Java"><img src="logos/java.svg" alt="Java"></div>
+      <div class="tech-logo" title="C"><img src="logos/c.svg" alt="C"></div>
+      <div class="tech-logo" title="C++"><img src="logos/cpp.svg" alt="C++"></div>
+      <div class="tech-logo" title="Spring Framework"><img src="logos/spring.svg" alt="Spring"></div>
+      <div class="tech-logo" title="Hibernate ORM"><img src="logos/hibernate.svg" alt="Hibernate"></div>
+      <div class="tech-logo" title="JPA"><img src="logos/jpa.svg" alt="JPA"></div>
+      <div class="tech-logo" title="Spring Cloud Gateway"><img src="logos/spring-cloud.svg" alt="Spring Cloud Gateway"></div>
+      <div class="tech-logo" title="JUnit"><img src="logos/junit.svg" alt="JUnit"></div>
+      <div class="tech-logo" title="GCP"><img src="logos/gcp.svg" alt="GCP"></div>
+      <div class="tech-logo" title="Feign"><img src="logos/feign.svg" alt="Feign"></div>
+      <div class="tech-logo" title="Kafka"><img src="logos/kafka.svg" alt="Kafka"></div>
+      <div class="tech-logo" title="HTML"><img src="logos/html5.svg" alt="HTML5"></div>
+      <div class="tech-logo" title="CSS"><img src="logos/css3.svg" alt="CSS3"></div>
+      <div class="tech-logo" title="JavaScript"><img src="logos/javascript.svg" alt="JavaScript"></div>
+      <div class="tech-logo" title="D3.js"><img src="logos/d3.svg" alt="D3.js"></div>
+      <div class="tech-logo" title="REST APIs"><img src="logos/rest.svg" alt="REST APIs"></div>
+      <div class="tech-logo" title="Microservices"><img src="logos/microservices.svg" alt="Microservices"></div>
+      <div class="tech-logo" title="WebSockets"><img src="logos/websockets.svg" alt="WebSockets"></div>
+      <div class="tech-logo" title="SSR"><img src="logos/ssr.svg" alt="Server-Side Rendering"></div>
+      <div class="tech-logo" title="Servlets"><img src="logos/servlets.svg" alt="Servlets"></div>
+      <div class="tech-logo" title="JSP"><img src="logos/jsp.svg" alt="JSP"></div>
+      <div class="tech-logo" title="Oracle SQL"><img src="logos/sql.svg" alt="SQL"></div>
+      <div class="tech-logo" title="MongoDB"><img src="logos/mongodb.svg" alt="MongoDB"></div>
+      <div class="tech-logo" title="Git"><img src="logos/git.svg" alt="Git"></div>
+      <div class="tech-logo" title="Jira"><img src="logos/jira.svg" alt="Jira"></div>
+      <div class="tech-logo" title="Confluence"><img src="logos/confluence.svg" alt="Confluence"></div>
+      <div class="tech-logo" title="Splunk"><img src="logos/splunk.svg" alt="Splunk"></div>
+      <div class="tech-logo" title="Kibana"><img src="logos/kibana.svg" alt="Kibana"></div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;">
+    <!-- programming languages -->
+    <div class="card">
+      <h3><i class="fas fa-code" style="color:var(--accent);margin-right:.5rem;"></i>Programming Languages</h3>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Python</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Java</span><span>95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>C</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>C++</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%;"></div></div></div>
+    </div>
+    <!-- frameworks & tools -->
+    <div class="card">
+      <h3><i class="fas fa-cogs" style="color:var(--accent);margin-right:.5rem;"></i>Frameworks & Tools</h3>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Spring Framework</span><span>95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Hibernate ORM</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>JPA</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Spring Cloud Gateway</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>JUnit</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Feign</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Kafka</span><span>88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%;"></div></div></div>
+    </div>
+    <!-- web development -->
+    <div class="card">
+      <h3><i class="fas fa-globe" style="color:var(--accent);margin-right:.5rem;"></i>Web Development</h3>
+      <div class="skill-bar"><div class="skill-bar-header"><span>HTML/CSS</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>JavaScript</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>D3.js</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>RESTful APIs</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>WebSockets</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Server-Side Rendering</span><span>75%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%;"></div></div></div>
+    </div>
+    <!-- databases -->
+    <div class="card">
+      <h3><i class="fas fa-database" style="color:var(--accent);margin-right:.5rem;"></i>Databases</h3>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Oracle SQL</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>MongoDB</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+    </div>
+    <!-- dev methodologies -->
+    <div class="card">
+      <h3><i class="fas fa-tasks" style="color:var(--accent);margin-right:.5rem;"></i>Dev & Agile</h3>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Git</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Jira & Confluence</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%;"></div></div></div>
+      <div class="skill-bar"><div class="skill-bar-header"><span>Splunk & Kibana</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%;"></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="container">
+  <h2 class="gradient-text" style="text-align:center;margin-bottom:3rem;">Professional Journey</h2>
+  <div class="timeline">
+    <!-- Senior Software Engineer, Quinbay -->
+    <div class="timeline-item card today">
+     <div class="timeline-marker"></div>
+      <h3>Master of Science, Computer Science</h3>
+      <h4 style="color:var(--accent);">Arizona State University • Aug 2024 – Dec 2025</h4>
+      <p>CGPA: 3.89 / 4.0</p>
+    </div>
+       <div class="timeline-item card">
+              <div class="timeline-marker"></div>
+      <h3>Senior Software Engineer</h3>
+      <h4 style="color:var(--accent);">Quinbay, Bengaluru • Feb 2024 – Jul 2024</h4>
+      <p>Led backend development for digital products and a Transportation Management System (TMS), achieving a 30% boost in performance and a 25% reduction in downtime. Mentored junior developers and introduced Spring Cloud Gateway to streamline API traffic and enhance security. Managed Oracle and MongoDB databases, optimizing queries to efficiently handle large-scale data workloads.</p>
+    </div>
+     
+    <!-- Software Developer, Quinbay -->
+    <div class="timeline-item card">
+      <div class="timeline-marker"></div>
+      <h3>Software Developer</h3>
+      <h4 style="color:var(--accent);">Quinbay, Bengaluru • Jul 2021 – Feb 2024</h4>
+ <p>Built resilient microservices using Spring Boot, Kafka, and Feign, enhancing overall system reliability. Implemented schema markup, leading to a 15% increase in click-through rates (CTR) and a 30% improvement in search engine rankings. Leveraged Splunk and Kibana for real-time monitoring and diagnostics, cutting incident response time by 40%
+</p>
+    </div>
+    <!-- Software Developer Intern, Quinbay -->
+    <div class="timeline-item card">
+      <div class="timeline-marker"></div>
+      <h3>Software Developer Intern</h3>
+      <h4 style="color:var(--accent);">Quinbay, Bengaluru • Jan 2021 – Jul 2021</h4>
+        <p>Developed microservices with Spring Boot & Kafka; contributed to end-to-end feature development.</p>
+    </div>
+    <!-- Summer Intern, HCL -->
+    <div class="timeline-item card">
+      <div class="timeline-marker"></div>
+      <h3>Summer Intern</h3>
+      <h4 style="color:var(--accent);">HCL Technologies, Noida • Jun 2019</h4>
+      <ul>
+        <li>Integrated Google Maps APIs; designed buffer tool for spatial analysis, improving efficiency by 25%.</li>
+      </ul>
+    </div>
+    <!-- Intern, BEL -->
+    <div class="timeline-item card">
+      <div class="timeline-marker"></div>
+      <h3>Intern</h3>
+      <h4 style="color:var(--accent);">Bharath Electronics Ltd, Ghaziabad • Nov 2018 – Dec 2018</h4>
+   <p>Developed HMI for Gas Turbine Generator, reducing operational lag by 10%.</p>
+    
+ 
+    </div>
+    <!-- Education Entries -->
+    <div class="timeline-item card">
+      <div class="timeline-marker"></div>
+      <h3>Bachelor of Technology, CSE</h3>
+      <h4 style="color:var(--accent);">SRM Institute of Science & Tech • Jun 2017 – May 2021</h4>
+      <p>CGPA: 9.23 / 10</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PROJECTS SHOWCASE -->
+    <section id="projects" class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;" class="gradient-text">Featured Projects</h2>
+        
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+            <div class="card">
+                <h3><i class="fas fa-chart-bar" style="color: var(--accent); margin-right: 0.5rem;"></i>Interactive Data Visualization</h3>
+                <p style="margin: 1rem 0; opacity: 0.9;">Created an interactive lollipop chart using D3.js with smooth animations and responsive design.</p>
+                <div style="margin-top: 1.5rem;">
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem;">D3.js</span>
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem;">HTML/CSS</span>
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem;">Animation</span>
+                </div>
+                <a href="project-d3js.html" class="btn" style="margin-top: 1rem;">View Details</a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 0.5rem;"></i>Privacy-Preserving Analytics</h3>
+                <p style="margin: 1rem 0; opacity: 0.9;">Built secure health insurance analytics using OAuth 2.0, Kafka, AES-256 encryption, and homomorphic encryption.</p>
+                <div style="margin-top: 1.5rem;">
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem;">Security</span>
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem;">Kafka</span>
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem;">Encryption</span>
+                </div>
+                <a href="privacy.html" class="btn" style="margin-top: 1rem;">View Details</a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-gateway" style="color: var(--accent); margin-right: 0.5rem;"></i>Spring Cloud Gateway</h3>
+                <p style="margin: 1rem 0; opacity: 0.9;">Implemented API Gateway for TMS improving backend performance by 25% through optimized traffic management.</p>
+                <div style="margin-top: 1.5rem;">
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem;">Spring</span>
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-right: 0.5rem;">Microservices</span>
+                    <span style="background: var(--surface); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem;">Performance</span>
+                </div>
+                <a href="gateway.html" class="btn" style="margin-top: 1rem;">View Details</a>
+            </div>
+        </div>
+        
+        <a href="projects.html" class="center-btn" style="margin-top: 1rem;">View All</a>
+
+    </section>
+
+    <!-- ARTICLES SECTION -->
+    <section id="articles" class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;" class="dynamic-text">Technical Articles</h2>
+        
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="card">
+                <h3><i class="fas fa-question-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>Is P = NP?</h3>
+                <p style="margin: 1rem 0; opacity: 0.9;">Explored the landmark computer science problem, discussing its implications for algorithms and complexity theory.</p>
+                <div style="margin-bottom: 1rem;">
+                    <small style="opacity: 0.7;">Published on Medium • Feb 2025</small>
+                </div>
+                <a href="articles.html" class="btn">Read Article</a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-chart-line" style="color: var(--accent); margin-right: 0.5rem;"></i>D3.js Data Narratives</h3>
+                <p style="margin: 1rem 0; opacity: 0.9;">Expert guide on crafting interactive visualizations and transforming data into dynamic narratives.</p>
+                <div style="margin-bottom: 1rem;">
+                    <small style="opacity: 0.7;">Published on Medium • May 2025</small>
+                </div>
+                <a href="articles.html" class="btn">Read Article</a>
+            </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-cloud" style="color: var(--accent); margin-right: 0.5rem;"></i>Spring Cloud Gateway</h3>
+                <p style="margin: 1rem 0; opacity: 0.9;">Comprehensive guide on implementing API traffic management - read by 6,000+ developers.</p>
+                <div style="margin-bottom: 1rem;">
+                    <small style="opacity: 0.7;">Published on Medium • Jul 2024 • 6K+ readers</small>
+                </div>
+                <a href="articles.html" class="btn">Read Article</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;" class="gradient-text">Let's Connect</h2>
+        
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+            <div class="card">
+                <h3><i class="fas fa-envelope" style="color: var(--accent); margin-right: 0.5rem;"></i>Get In Touch</h3>
+                <div style="margin: 1.5rem 0;">
+                    <p><i class="fas fa-phone" style="margin-right: 0.5rem; color: var(--accent);"></i>+1-480-738-2830</p>
+                    <p style="margin: 0.5rem 0;"><i class="fas fa-envelope" style="margin-right: 0.5rem; color: var(--accent);"></i>raisinghanii@outlook.com</p>
+                    <p><i class="fab fa-linkedin" style="margin-right: 0.5rem; color: var(--accent);"></i>gaurav-raisinghani</p>
+                    <p style="margin: 0.5rem 0;"><i class="fab fa-github" style="margin-right: 0.5rem; color: var(--accent);"></i>Gaurav-Raisinghani</p>
+                </div>
+                <p style="opacity: 0.9;">Open to opportunities in software engineering, backend development, and data visualization projects.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Send a Message</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Gaurav Raisinghani. All rights reserved. Built with passion and code.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Back to Top Button -->
+ <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+</body>
+</html>
