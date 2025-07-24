@@ -160,18 +160,18 @@ function showLoadingScreen() {
   }, 2000);
 }
 
-// Theme Toggle
-function initThemeToggle() {
-  const btn = document.getElementById("themeToggle");
-  btn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    const isLight = document.body.classList.contains("light-mode");
-    btn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
-    gsap.to("body", { duration: 0.5, ease: "power2.out" });
-    if (isLight) setTimeout(initParticles_light, 200);
-    else setTimeout(initParticles, 200);
-  });
-}
+// // Theme Toggle
+// function initThemeToggle() {
+//   const btn = document.getElementById("themeToggle");
+//   btn.addEventListener("click", () => {
+//     document.body.classList.toggle("light-mode");
+//     const isLight = document.body.classList.contains("light-mode");
+//     btn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
+//     gsap.to("body", { duration: 0.5, ease: "power2.out" });
+//     if (isLight) setTimeout(initParticles_light, 200);
+//     else setTimeout(initParticles, 200);
+//   });
+// }
 
 // Advanced Animations
 function initAdvancedAnimations() {

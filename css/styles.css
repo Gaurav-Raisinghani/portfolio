@@ -15,7 +15,7 @@
   --surface: rgba(255, 255, 255, 0.05);
 }
 
-body.light-mode {
+/* body.light-mode {
    --bg-1: #001F3F;
   --bg-2: #0A2540;
   --txt: #FFFFFF;
@@ -27,7 +27,7 @@ body.light-mode {
   --particle-light: #70fa00;
   --particle-count: 40
   --surface: rgba(255, 255, 255, 0.05);
-}
+} */
 
 /* Global */
 * { box-sizing:border-box; margin:0; padding:0; will-change:transform; }
