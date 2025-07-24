@@ -21,6 +21,7 @@ html { scroll-behavior:smooth; scroll-snap-type:y proximity; }
 body {
   padding-top: 60px;
   font-family:'Inter',sans-serif;
+  background-color: var(--bg-1); 
   background:
     radial-gradient(circle at 20% 50%, rgba(57,255,20,0.1) 0%,transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(46,204,113,0.1) 0%,transparent 50%),
