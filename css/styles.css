@@ -2,16 +2,16 @@
 
 /* Theme Tokens */
 :root {
- --bg-1: color(srgb 0 0% 24.4%) !important;  /* #001F3F in sRGB */
-  --bg-2: color(srgb 0 6.2% 25.1%) !important; /* #0A2540 in sRGB */
-  --txt: color(srgb 100% 100% 100%) !important; /* Pure white */
-  --accent: color(srgb 22.4% 100% 7.8%) !important; /* #39FF14 in sRGB */
+  --bg-1: #001F3F;
+  --bg-2: #0A2540;
+  --txt: #FFFFFF;
+  --accent: #39FF14;
   --secondary: #2ECC71;
   --card: rgba(255, 255, 255, 0.1);
   --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   --particle: #39FF14;
   --particle-light: #70fa00;
-  --particle-count: 14
+  --particle-count: 14;
   --surface: rgba(255, 255, 255, 0.05);
 }
 
@@ -542,18 +542,4 @@ body.no-scroll {
   .hero-content { padding: 1rem; }
   .hero-tagline { justify-content: center; padding: 0 0.5rem; }
     .tagline-item{text-align: left;font-size: small;}
-}
-
-@supports (-webkit-print-color-adjust: exact) {
-  html {
-    -webkit-print-color-adjust: exact !important;
-    color-adjust: exact !important;
-  }
-}
-
-@media (color-gamut: p3) {
-  body {
-    background: radial-gradient(circle at 20% 50%, var(--bg-1) 0%, transparent 50%);
-    background: radial-gradient(circle at 80% 20%, var(--bg-2) 0%, transparent 50%);
-  }
 }
