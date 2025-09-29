@@ -345,7 +345,7 @@ async function loadMediumArticles() {
   );
   const { items } = await res.json();
   const list = items
-    .slice(0, 6)
+    .slice(0, 21)
     .map(
       (post) => `
     <div class="card">
